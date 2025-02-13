@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <h2>Sentiment Analysis</h2>
+    <p><strong>Article 1 Sentiment:</strong> {{ result.sentiment_text1 }}</p>
+    <p><strong>Article 2 Sentiment:</strong> {{ result.sentiment_text2 }}</p>
+    
+    <h2>Keyword Clustering</h2>
+    <p><strong>Top Keywords for Article 1:</strong> {{ result.keywords_text1 }}</p>
+    <p><strong>Top Keywords for Article 2:</strong> {{ result.keywords_text2 }}</p>
+    
+    <h2>Word Cloud Visualization</h2>
+    <h3>Article 1</h3>
+    <img src="data:image/png;base64,{{ result.wordcloud_text1 }}" alt="Word Cloud for Article 1">
+    <h3>Article 2</h3>
+    <img src="data:image/png;base64,{{ result.wordcloud_text2 }}" alt="Word Cloud for Article 2">
+
+    <br><br>
+    <a href="/">Analyze More Articles</a>
+</body>
+</html>
